@@ -9,12 +9,13 @@ body{
     text-align: center;
 }
 
-.container{
-    margin: 10px;
+#container{
+    margin: 5px;
     background-color: rgb(230, 230, 230);
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 0;
 }
 
 .banner{
@@ -58,7 +59,7 @@ h1{
     color:white;
     padding-top: 70px;
     line-height: 2em;
-    margin: 10px;
+    margin: 5px;
 }
 
 blockquote{
@@ -77,12 +78,9 @@ blockquote{
     align-items: center;
     text-align: justify;
 }
-hr{
-    border-top: 1px solid rgb(102, 0, 150);
-}
 
 footer{
-    background-color: turquoise;
+    background-color: rgb(220, 245, 255);
     padding: 40px;
     /* border-radius: 12px; */
     width: 80%;
@@ -93,8 +91,138 @@ li{
     list-style-type: none;
 }
 
+.socialMedia{
+    background-color: rgb(255, 255, 255);
+    padding: 10px 0px 10px 0;
+    z-index: 100;
+    position: fixed;
+    top: 300px;
+    left: 5px;
+    box-shadow: 0.5px 0.5px #888888;
+    animation: move 2s infinite alternate;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes move{
+    from{top:300px}
+    to{top: 330px}
+}
+
+.search{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+fieldset{
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+}
+legend{
+    background-color: #cccccc;
+    border-radius: 12px;
+    padding: 10px;
+    text-align: left;
+    color: white;
+}
+
+.menubar{
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin: 7px;
+}
+
+.menuText{
+    color: white;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
 
 
+.navMobile{
+    background-color: rgb(0, 0, 0);
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    height: 100%;
+    width: 300px;
+    z-index: 120;
+    position: absolute;
+    left: 35px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+#popUp{
+    display: none;
+}
 
+.closeNavMobile{
+    font-size: 30px;
+    color: white;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    text-align: center;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.closeNavMobile:hover{
+    background-color: white;
+    color: black;
+}
+
+.navMobile a{
+    padding: 10px;
+    color: white;
+}
+
+.navMobile a:hover{
+    background-color: white;
+    color: black;
+}
+
+@media only screen and (max-width: 1500px) {
+    .bannerText{
+        font-size: 25px;
+    }
+
+    nav{
+        display: none;
+    }
+
+}
+
+#copy{
+    background-color: rgb(167, 167, 167);
+    z-index: 170;
+    width: 100%;
+    color: white;
+}
+
+
+@media only screen and (min-width: 1500px) {
+
+    .menu{
+        display: none;
+    }
+
+
+}
 
 

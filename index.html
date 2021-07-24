@@ -12,8 +12,32 @@
 </head>
 
 <body>
-    <div class="container">
+    <div id="container">
         <div style="background-image:url('images/banner.jpeg');" class="banner">
+  
+            <div class="menu" onclick="OpenPopUp()">
+                <div class="menuIcon">
+                    <div class="menubar"></div>
+                    <div class="menubar"></div>
+                    <div class="menubar"></div>
+                    
+                </div>
+                <p class="menuText">MENU</p>
+            </div>
+      
+            
+            <div id="popUp">
+            <div class="navMobile">
+              
+                    <p class="closeNavMobile" onclick="hidePopUp()">x</p>
+                <a>Home</a>
+                <a>Welcome</a>
+                <a>Mission</a>
+                <a>Vision</a>
+                <a>Contact</a>
+            </div>
+        </div>
+
             <nav>
                 <div class="topnav">
                     <a>Home</a>
@@ -21,11 +45,21 @@
                     <a>Mission</a>
                     <a>Vision</a>
                     <a>Contact</a>
+                   
                 </div>
+                
             </nav>
-            <h1>this for public speaking, come and join us to learn inverted fishbone theory <br />
+            <form class="search">
+                <input type="search" placeholder="Enter keyword" name="search"/>
+                <input type="submit" value="Search"/>
+            </form>
+            <h1 class="bannerText">this for public speaking, come and join us to learn inverted fishbone theory <br />
                 Buy the book now to learn this!</h1>
             <p class="author"><i>by jerry Chen best selling author</i></p>
+            <div class="socialMedia">
+                <img src="images/linkedin.png" width="30px">
+                <img src="images/facebook.png" width="30px">
+            </div>
         </div>
         <div class="text">
             <p>
@@ -68,28 +102,35 @@
             </p>
 
             <footer>
-                <li>
-                    Email: query@inverted.com
-                </li>
-                <li>
-                    Contact: +65 2323 2232
-                </li>
+                <fieldset>
+                    <legend>NEWSLETTER</legend>
+                    <form action="">
+                        <p>Subscribe to our email list:</p>
+                        <input type="text" name="email"/>
+                        <input type="submit" name="subscribe" value="Subscribe"/>
+                    </form>
+
+                </fieldset>
                 
             </footer>
+            
         </div>
-
-        
-
+        <span id="copy"></span>
         <script>
+            function OpenPopUp(){
+                document.getElementById("popUp").style.display="block";
+            }
+
+            function hidePopUp(){
+                document.getElementById("popUp").style.display="none";
+            }
+
+            var today = new Date();
+            year = today.getFullYear();
+            document.getElementById("copy").innerHTML='<p>Copyright &copy;' + year +'</p>';
 
         </script>
-
     </div>
-
-
-
-
-
 
 </body>
 

@@ -4,3 +4,9 @@ blockquote{
     border-left-width: 1em;
     border-left-style: solid;
 }
+
+h1{
+    max-height: 100px;
+    width: 200px;
+    overflow: auto;
+}
